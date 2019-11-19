@@ -11,7 +11,7 @@ We will cast the question in terms of [graph theory][graph_theory]. The graph we
 
 There we be an edge between two vertices `(p,q)` and `(s,t)` if and only if either of the numbers on the tiles agree. I.e. `p` equals `s` or `t`, or `q` equals `s` or `t`. E.g. Vertex `(0,1)` is connected by an edges with with vertex `(0,2).
 
-## Minimal criminal
+### Minimal criminal
 A _minimal criminal_, i.e. an example of a play that leaves out more than one tile, leaves out three tiles. Since we can relabel the tiles so the minimal tiles that share no edges among them is
 
 ```
@@ -20,9 +20,15 @@ A _minimal criminal_, i.e. an example of a play that leaves out more than one ti
 
 Removing these vertices from the graph and all incident edges leaves a graph. From this graph we need to determine if it has a perfect matching.
 
-## Prefect Matching
+### Prefect Matching
 We want to determine if a [perfect matching][matching] exists.
+
+## Development
+We will be using [Rust][rust] with the [petgraph][] crate. Before we can use it we need to implement a maximal matching algorithm. There is an [issue][blossem] that advocates for a perfect matching algorithm.
 
 [phedny]: https://github.com/phedny
 [graph_theory]: https://en.wikipedia.org/wiki/Graph_theory
 [matching]: https://en.wikipedia.org/wiki/Matching_(graph_theory)
+[rust]: https://www.rust-lang.org/
+[petgraph]: https://crates.io/crates/petgraph
+[blossem]: https://github.com/petgraph/petgraph/issues/296
