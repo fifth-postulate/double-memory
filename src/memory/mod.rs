@@ -39,16 +39,20 @@ mod test {
     use super::*;
 
     #[test]
-    fn memory_10_graph_has_45_vertices() {
-        let g = graph(10);
+    fn memory_graph_has_correct_number_of_vertices() {
+        for n in 2..11 {
+            let g = graph(n);
 
-        assert_eq!(g.node_count(), 45);
+            assert_eq!(g.node_count(), n*(n-1)/2);
+        }
     }
 
     #[test]
-    fn memory_10_graph_has_360_edges() {
-        let g = graph(10);
-
-        assert_eq!(g.edge_count(), 360);
+    fn memory_graph_has_correct_number_of_edges() {
+        for n in 3..11 {
+            let g = graph(n);
+            
+            assert_eq!(g.edge_count(), n*(n-1)*(n-2)/2);
+        }
     }
 }
