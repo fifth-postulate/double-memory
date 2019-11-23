@@ -8,7 +8,7 @@ use std::collections::BTreeMap as Dict;
 
 /// Create a memory graph
 pub fn graph(n: usize) -> Graph<(usize, usize), (), Undirected, u32> {
-    let mut graph = Graph::with_capacity(n * (n-1)/2, 0);
+    let mut graph = Graph::with_capacity(n * (n - 1) / 2, 0);
     let mut indices = Dict::new();
     for first in 0..n {
         for second in (first + 1)..n {
@@ -17,7 +17,7 @@ pub fn graph(n: usize) -> Graph<(usize, usize), (), Undirected, u32> {
             indices.insert(label, index);
         }
     }
-    
+
     for origin in indices.keys() {
         for neighbor in indices
             .keys()
@@ -43,7 +43,7 @@ mod test {
         for n in 2..11 {
             let g = graph(n);
 
-            assert_eq!(g.node_count(), n*(n-1)/2);
+            assert_eq!(g.node_count(), n * (n - 1) / 2);
         }
     }
 
@@ -51,8 +51,8 @@ mod test {
     fn memory_graph_has_correct_number_of_edges() {
         for n in 3..11 {
             let g = graph(n);
-            
-            assert_eq!(g.edge_count(), n*(n-1)*(n-2)/2);
+
+            assert_eq!(g.edge_count(), n * (n - 1) * (n - 2) / 2);
         }
     }
 }
