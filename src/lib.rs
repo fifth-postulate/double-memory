@@ -14,8 +14,20 @@ use std::hash::Hash;
 /// Determine a maximal matching for a graph.
 pub fn maximal_matching<N, E, I>(
     _graph: Graph<N, E, Undirected, I>
-) -> Set<EdgeIndex<I>> where I: Eq + Hash {
-    Set::new()
+) -> Matching<I> where I: Eq + Hash {
+    Matching::empty()
+}
+
+/// Represents a matching for a certain graph.
+pub struct Matching<I> where I: Eq + Hash {
+    edges: Set<EdgeIndex<I>>,
+}
+
+impl<I> Matching<I> where I : Eq + Hash {
+    /// return an empty matching
+    pub fn empty() -> Self {
+        Self { edges: Set::new() }
+    }
 }
 
 #[cfg(test)]
