@@ -15,7 +15,7 @@ There we be an edge between two vertices `(p,q)` and `(s,t)` if and only if eith
 A _minimal criminal_, i.e. an example of a play that leaves out more than one tile, leaves out three tiles. Since we can relabel the tiles so the minimal tiles that share no edges among them is
 
 ```
-(0, 1), (2,3), (4,5)
+(0,1), (2,3), (4,5)
 ```
 
 Removing these vertices from the graph and all incident edges leaves a graph. From this graph we need to determine if it has a perfect matching.
