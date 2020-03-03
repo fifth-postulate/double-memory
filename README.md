@@ -9,7 +9,7 @@ We asked the question: **It is possible to have a group of more tiles left over?
 ## Description
 We will cast the question in terms of [graph theory][graph_theory]. The graph we will be analyzing will be composed of vertices. Each vertex corresponds with a tile and will be designated by a pair of numbers `(0,1), (0,2), (0,3), ..., (8,9)`.
 
-There we be an edge between two vertices `(p,q)` and `(s,t)` if and only if either of the numbers on the tiles agree. I.e. `p` equals `s` or `t`, or `q` equals `s` or `t`. E.g. Vertex `(0,1)` is connected by an edges with with vertex `(0,2).
+There we be an edge between two vertices `(p,q)` and `(s,t)` if and only if either of the numbers on the tiles agree. I.e. `p` equals `s` or `t`, or `q` equals `s` or `t`. E.g. Vertex `(0,1)` is connected by an edges with with vertex `(0,2)`.
 
 ### Minimal criminal
 A _minimal criminal_, i.e. an example of a play that leaves out more than one tile, leaves out three tiles. Since we can relabel the tiles so the minimal tiles that share no edges among them is
