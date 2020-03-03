@@ -2,7 +2,7 @@
 A puzzle posed after learning about a game.
 
 ## Origin
-[@phedny][phedny] told me about a game. It is about memory but with pictures on both sides. The pictures are the numbers 0 through 9, and each combination occurs exactly once. Hence there are `10*9/2 = 45` tiles. Since this number is odd, at least one tile can't be match.
+[@phedny][phedny] told me about a game. It is about memory but with pictures on both sides. The pictures are the numbers 0 through 9, and each combination occurs exactly once. Hence there are `10*9/2 = 45` tiles. Since this number is odd, at least one tile can't be matched.
 
 We asked the question: **It is possible to have a group of more tiles left over?**
 
