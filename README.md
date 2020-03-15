@@ -8,6 +8,22 @@ A puzzle posed after learning about a game played with [_Kumbu_][kumbu]. Kumbu i
 
 We asked the question: **It is possible to have a group of more tiles left over?**
 
+## Solution
+After I have started working on implementing the solution angle below, @phedny gave an answer to the above question: **yes**.
+
+### Reasoning
+We can work towards leaving
+
+```
+(0, 1), (2, 3), (4,5)
+```
+
+We will do this in the following phases
+
+1. Work towards leaving `(0, 1)`
+2. Work towards leaving `(2, 3)`
+3. Work towards leaving `(4, 5)`
+
 ## Description
 We will cast the question in terms of [graph theory][graph_theory]. The graph we will be analyzing will be composed of vertices. Each vertex corresponds with a tile and will be designated by a pair of numbers `(0,1), (0,2), (0,3), ..., (8,9)`.
 
