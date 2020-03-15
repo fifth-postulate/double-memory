@@ -23,6 +23,41 @@ We will do this in the following phases
 1. Work towards leaving `(0, 1)`
 2. Work towards leaving `(2, 3)`
 3. Work towards leaving `(4, 5)`
+4. Match remaining
+
+```
+(0, 1) (0, 2) (0, 3) (0, 4) (0, 5) (0, 6) (0, 7) (0, 8) (0, 9)
+(1, 2) (1, 3) (1, 4) (1, 5) (1, 6) (1, 7) (1, 8) (1, 9)
+(2, 3) (2, 4) (2, 5) (2, 6) (2, 7) (2, 8) (2, 9)
+(3, 4) (3, 5) (3, 6) (3, 7) (3, 8) (3, 9)
+(4, 5) (4, 6) (4, 7) (4, 8) (4, 9)
+(5, 6) (5, 7) (5, 8) (5, 9)
+(6, 7) (6, 8) (6, 9)
+(7, 8) (7, 9)
+(8, 9)
+````````````
+
+#### Phase `(0, 1)`
+In order to leave `(0, 1)` we match `(0, i)` with `(1, i)`, where `i` runs from 2 to 9.
+
+#### Phase `(2, 3)`
+In order to leave both `(0, 1)` and `(2, 3)` we match `(2, j)` with `(3, j)`, where `j` runs from 4 to 9.
+
+#### Phase `(4, 5)`
+In order ro leave `(0,1)`, `(2, 3)` and `(4, 5)` we match `(4, k)` with `(5, k)`, where `k` runs from 6 to 9.
+
+#### Match remaining
+The remaining tiles can be matched in the following way
+
+1. `(6, 7)` with `(6, 8)`
+2. `(6, 9)` with `(7, 9)`
+3. `(7, 8)` with `(8, 9)`
+
+### Leaving 5
+With some thought one can also find that 5 tiles can be left.
+
+#### Phase `(6, 7)` & `(8, 9)`
+In similar vain leaving `(6, 7)`, which also leaves `(8, 9)`, we match `(6, l)` with `(7, l)` where `l` runs from 8 to 9.
 
 ## Description
 We will cast the question in terms of [graph theory][graph_theory]. The graph we will be analyzing will be composed of vertices. Each vertex corresponds with a tile and will be designated by a pair of numbers `(0,1), (0,2), (0,3), ..., (8,9)`.
