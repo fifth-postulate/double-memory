@@ -1,5 +1,7 @@
 # Double Sided Memory
-A puzzle posed after learning about a game.
+A puzzle posed after learning about a game played with [_Kumbu_][kumbu]. Kumbu is
+
+> an educational game with pictures on both sides. By playing, your memory and math skills will improve.  This game contains 4 game variants with different difficulties. It's fun for all ages. Kumbukumbu means memory in swahili.
 
 ## Origin
 [@phedny][phedny] told me about a game. It is about memory but with pictures on both sides. The pictures are the numbers 0 through 9, and each combination occurs exactly once. Hence there are `10*9/2 = 45` tiles. Since this number is odd, at least one tile can't be matched.
@@ -26,6 +28,7 @@ We want to determine if a [perfect matching][matching] exists.
 ## Development
 We will be using [Rust][rust] with the [petgraph][] crate. Before we can use it we need to implement a maximal matching algorithm. There is an [issue][blossem] that advocates for a perfect matching algorithm.
 
+[kumbu]: https://www.rielekst.com/en/games/kumbu-kaartspel/
 [phedny]: https://github.com/phedny
 [graph_theory]: https://en.wikipedia.org/wiki/Graph_theory
 [matching]: https://en.wikipedia.org/wiki/Matching_(graph_theory)
